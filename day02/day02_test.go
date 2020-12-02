@@ -1,4 +1,4 @@
-package day01
+package day02
 
 import (
 	"testing"
@@ -10,23 +10,20 @@ import (
 
 func input() []string {
 	return []string{
-		"1721",
-		"979",
-		"366",
-		"299",
-		"675",
-		"1456",
+		"1-3 a: abcde",
+		"1-3 b: cdefg",
+		"2-9 c: ccccccccc",
 	}
 }
 
 func TestPart1(t *testing.T) {
-	output, err := MainE(input(), aoc.Part1)
+	count, err := MainE(input(), aoc.Part1)
 	require.NoError(t, err)
-	assert.Equal(t, "514579", output)
+	assert.Equal(t, "2", count)
 }
 
 func TestPart2(t *testing.T) {
-	output, err := MainE(input(), aoc.Part2)
+	count, err := MainE(input(), aoc.Part2)
 	require.NoError(t, err)
-	assert.Equal(t, "241861950", output)
+	assert.Equal(t, "1", count)
 }

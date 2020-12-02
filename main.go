@@ -6,7 +6,9 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/danielmmetz/advent-of-code-2020/aoc"
 	"github.com/danielmmetz/advent-of-code-2020/day01"
+	"github.com/danielmmetz/advent-of-code-2020/day02"
 )
 
 func main() {
@@ -35,9 +37,15 @@ func mainE() error {
 	var result string
 	var err error
 
+	p, err := aoc.ToPart(day)
+	if err != nil {
+		return err
+	}
 	switch day {
 	case 1:
-		result, err = day01.MainE(lines, part)
+		result, err = day01.MainE(lines, p)
+	case 2:
+		result, err = day02.MainE(lines, p)
 	default:
 		err = fmt.Errorf("invalid day provided")
 	}

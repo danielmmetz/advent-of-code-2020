@@ -3,14 +3,16 @@ package day01
 import (
 	"fmt"
 	"strconv"
+
+	"github.com/danielmmetz/advent-of-code-2020/aoc"
 )
 
-func MainE(input []string, part int) (string, error) {
+func MainE(input []string, part aoc.Part) (string, error) {
 	var fn func([]int) ([]int, error)
 	switch part {
-	case 1:
+	case aoc.Part1:
 		fn = findPair
-	case 2:
+	case aoc.Part2:
 		fn = findTriplet
 	default:
 		return "", fmt.Errorf("invalid part number specified: %d", part)
