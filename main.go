@@ -20,6 +20,7 @@ import (
 	"github.com/danielmmetz/advent-of-code-2020/day11"
 	"github.com/danielmmetz/advent-of-code-2020/day12"
 	"github.com/danielmmetz/advent-of-code-2020/day13"
+	"github.com/danielmmetz/advent-of-code-2020/day14"
 )
 
 func main() {
@@ -79,6 +80,8 @@ func mainE() error {
 		result, err = day12.MainE(lines, p)
 	case 13:
 		result, err = day13.MainE(lines, p)
+	case 14:
+		result, err = day14.MainE(lines, p)
 	default:
 		err = fmt.Errorf("invalid day provided")
 	}
